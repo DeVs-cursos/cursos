@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\..\\Desktop\\videosNoe\\JavaScript_DOM_Eventos_inicio"
+		},
+		{
+			"path": "..\\..\\..\\Desktop\\videos1\\rodecopy\\copyRode"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "rode"
+	}
+}

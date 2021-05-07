@@ -1,0 +1,378 @@
+:root {
+    --fuentePrincipal:  'Antonio', sans-serif;;
+    --fuenteSecundaria : 'Bangers', cursive;
+    --fuenteTexto:  'Roboto', sans-serif;
+
+    --colornav: #201f1f;
+    --grisClaro: #f1f2f5;
+    --gris: #364954;
+    --amarillo: #FFAB00;
+    --azul: #7EA5F5;
+    --azulFuerte: #5C7AB5;
+    --blanco: #FFFFFF;
+}
+
+*{
+    margin: 0;
+    list-style: none;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1 rem = 10px*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.header-contenido {
+    background-color: var(--colornav);
+    padding: 2rem;
+}
+
+@media (max-width: 858px) {
+    .header-contenido {
+        background-color: var(--colornav);
+        padding: 10px;
+    }
+    
+}
+
+
+@media (min-width: 768px) {
+
+    .header-enlaces {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .iconos {
+    margin-left: 10rem;
+    }
+
+}
+
+
+
+
+/** NAVS **/
+.nav__link {
+    color: var(--blanco);
+    font-family: 'Raleway',sans-serif;;
+    font-size: 2.2rem;
+    font-weight: 900;
+    text-decoration: none;
+}
+
+
+.nav__enlace--activo,
+.nav__link:hover {
+    color: var(--amarillo);
+}
+
+
+@media (max-width: 768px) {
+    .flex--modificador {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo a {
+        color: var(--blanco);
+        text-decoration: none;
+        font-size: 4rem;
+        font-family: var(--fuenteTexto);
+    }
+
+    .logo a:hover {
+        color: var(--amarillo);
+        text-shadow: 0 0 1rem var(--amarillo);
+    }
+}
+/** LOGO TAMAÑO GRANDE**/
+@media (min-width: 768px) {
+    .logo a{
+        display:none;
+    }
+}
+
+
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    text-align: right;
+    padding-top: -5rem;
+    line-height: 80px;
+    /* margin-right: -2rem; */
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+
+
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    .ul-g{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    .ul-g .li-c{
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    nav .ul-g .li-c a{
+      font-size: 2rem;
+    }
+    #check:checked ~ .ul-g{
+      left: 0;
+    }
+  }
+/* ICONOS */
+
+@media (min-width: 768px){
+    .header__icon {
+        order: unset;
+        justify-content: flex-end;
+        gap: 1.5rem;
+    }
+
+}
+
+.header__icon {
+    display: flex;
+    justify-content: center;
+}
+
+.rebote:hover {
+   margin-top: -.2rem;
+}
+
+/** Hero**/
+.contenido-hero {
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40rem;
+}
+
+
+/** EFECTO ESCRITURA**/
+
+.contenido__hero--texto h2{
+    text-align: left;
+    padding:  12rem 0;
+    padding-left: 2.5rem;
+    color: var(--blanco);
+    font-size: 6rem;
+    font-family: var(--fuenteTexto);
+}
+
+.parrafo__hero {
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-top: -10rem;
+    padding-left: 2.5rem;
+    font-family: var(--fuentePrincipal);
+}
+
+@media (max-width: 768px) {
+    .contenido__hero--texto h2 {
+        font-size: 3.4rem;
+    }
+}
+
+.alterador {
+    color: var(--amarillo);
+    text-decoration: none;
+}
+
+.curso {
+    color: var(--amarillo);
+}
+
+/** FIN BANNER **/
+
+/** MAIN **/
+
+.main__contenido-informacion {
+    margin-top: 4rem;
+    padding: 3rem;
+    padding-bottom: 6rem;
+}
+
+.texto__main-h2 {
+    font-size: 4rem;
+    font-family: var(--fuenteTexto);
+    font-weight: bold;  
+}
+
+.texto__main-h1 {
+    color: var(--gris);
+    font-size: 5rem;
+    font-family: var(--fuentePrincipal);
+    text-transform: capitalize;
+}
+
+.texto__main-efecto {
+    color: var(--azulFuerte);
+    text-shadow: 0 0 1rem var(--azulFuerte);
+}
+
+.texto__main-p {
+    font-size: 2rem;
+    font-family: var(--fuenteTexto);
+    font-weight: normal;
+    text-transform: lowercase;
+    line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+    .texto__main-p {
+        max-width: 80%;
+    }
+} 
+
+/** SECCION CURSOS **/
+
+.main__cursos {
+   background: var(--colornav);
+}
+
+
+.lista-cursos li {
+    padding: 3rem 0;
+    border-bottom: 1px dashed var(--blanco);
+}
+
+.bg__curso {
+    background-color: #2a2a2a;
+    margin: 3rem;
+
+    -webkit-box-shadow: 0 5px 5px -4px rgb(0 0 0 / 53%);
+    -moz-box-shadow: 0 5px 5px -4px rgba(0,0,0,.53);
+    box-shadow: 0 5px 5px -4px rgb(0 0 0 / 53%);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 768px){
+    .curso-flex {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+@media (min-width: 768px){
+    .curso-flex .contenido-curso {
+        flex: 0 0 calc(60% - 4rem);
+    }
+}
+
+
+@media (min-width: 768px){
+    .curso-flex .imagen {
+        flex: 0 0 40%;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .curso-flex h3 {
+        margin: 0;
+    }
+}
+
+.contenedor-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+    .btn {
+        flex: 0 0 auto;
+        padding: 1rem 4rem;
+    }
+}
+
+.h3-flex {
+    color: var(--blanco);
+    font-size: 4.5rem;
+    font-weight: 700;
+    font-family: var(--fuenteTexto);
+    line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+    .meta-curso{
+        display: flex;
+    }
+    
+    .precio-curso {
+        display: flex;     
+      
+    }
+}
+
+@media (min-width: 768px) {
+    .precio-curso p:first-of-type {
+        margin-right: 3rem;
+    }
+
+    .meta-curso p {
+        margin-right: 3rem;
+    }
+}
+
+.contenido-curso div {
+    line-height: 1.5;
+    padding-bottom: .5rem;
+}
+
+
+.p-flex {
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+.px2 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.py2 {
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+.mt2 {
+    margin-top: 5rem;
+}
+ 
